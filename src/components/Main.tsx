@@ -21,25 +21,37 @@ function Main() {
             <ul>
               <li>
                 <label>
-                  <input type='checkbox' name='bestFeatures' value='colour' />
+                  <input type='checkbox'
+                    name='bestFeatures'
+                    value='colour'
+                  />
                   <span> It's yellow!</span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='bestFeatures' value='sound' />
+                  <input type='checkbox'
+                    name='bestFeatures'
+                    value='sound'
+                  />
                   <span>  It squeaks!</span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='bestFeatures' value='logo' />
+                  <input type='checkbox'
+                    name='bestFeatures'
+                    value='logo'
+                  />
                   <span> it has a logo </span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='bestFeatures' value='size' />
+                  <input type='checkbox'
+                    name='bestFeatures'
+                    value='size'
+                  />
                   <span> It's big!</span>
                 </label>
               </li>
@@ -51,25 +63,35 @@ function Main() {
             <ul>
               <li>
                 <label>
-                  <input type='checkbox' name='worstFeatures' value='color ' />
+                  <input type='checkbox'
+                    name='worstFeatures'
+                    value='color '
+                  />
                   <span> It's  yellow!</span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='worstFeatures' value='sound ' />
+                  <input type='checkbox'
+                    name='worstFeatures'
+                    value='sound '
+                  />
                   <span> It squeaks!</span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='worstFeatures' value='logo ' />
+                  <input type='checkbox'
+                    name='worstFeatures'
+                    value='logo ' />
                   <span> It has a  logo!</span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type='checkbox' name='worstFeatures' value='size' />
+                  <input type='checkbox'
+                    name='worstFeatures'
+                    value='size' />
                   <span> It's big!</span>
                 </label>
               </li>
