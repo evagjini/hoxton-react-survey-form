@@ -75,6 +75,85 @@ function Main() {
               </li>
             </ul>
           </div>
+          <h3>How do you rate your rubber duck consistency?</h3>
+          <ul className='form__group radio'>
+            <li>
+              <input
+                id='consistency-1'
+                type='radio'
+                name='consistency'
+                value='1'
+              />
+              <label htmlFor='consistency-1'>1</label>
+            </li>
+            <li>
+              <input
+                id='consistency-2'
+                type='radio'
+                name='consistency'
+                value='2'
+              />
+              <label htmlFor='consistency-2'>2</label>
+            </li>
+            <li>
+              <input
+                id='consistency-3'
+                type='radio'
+                name='consistency'
+                value='3'
+              />
+              <label htmlFor='consistency-3'>3</label>
+            </li>
+            <li>
+              <input
+                id='consistency-4'
+                type='radio'
+                name='consistency'
+                value='4'
+              />
+              <label htmlFor='consistency-4'>4</label>
+            </li>
+          </ul>
+          <h3>How do you rate your rubber duck colour?</h3>
+          <ul className="form__group radio">
+            <li>
+              <input
+                id='colour-1'
+                type='radio'
+                name='colour'
+                value='1'
+              />
+              <label htmlFor='colour-1'>1</label>
+            </li>
+            <li>
+              <input
+                id='colour-2'
+                type='radio'
+                name='colour'
+                value='2'
+              />
+              <label htmlFor='colour-2'>2</label>
+            </li>
+            <li>
+              <input
+                id='colour-3'
+                type='radio'
+                name='colour'
+                value='3'
+              />
+              <label htmlFor='colour-3'>3</label>
+            </li>
+            <li>
+              <input
+                id='colour-4'
+                type='radio'
+                name='colour'
+                value='4'
+              />
+              <label htmlFor='colour-4'>4</label>
+            </li>
+          </ul>
+
         </form>
 
       </section>
