@@ -1,15 +1,15 @@
 import ItemsList from "./ItemsList";
 
 export type AnswerItemType = {
-  username: string,
-  email: string,
-  logo: number
-  colour: number
-  consistency: number
-  timeSpent: string[]
-  review: string
-  bestFeatures: string[]
-  worstFeatures: string[]
+  // username: string,
+  // email: string,
+  // logo: number
+  // colour: number
+  // consistency: number
+  // timeSpent: string[]
+  // review: string
+  // bestFeatures: string[]
+  // worstFeatures: string[]
 
 };
 
