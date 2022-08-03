@@ -35,7 +35,7 @@ function Main() {
 
   return (
     <main className="main">
-      <section className={`main__list ${open ? "open" : ""}`}>
+      <section className={`main__list ${(open) ? "open" : ""}`}>
         <h2>Answers list</h2>
         <AnswersList answersList={answers} />
       </section>
