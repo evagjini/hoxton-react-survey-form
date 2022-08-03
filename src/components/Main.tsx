@@ -1,4 +1,20 @@
 import { useState } from "react"
+import AnswersList from "./AnswersList";
+
+
+type AnswerType = {
+  review: string
+  email: string
+  username: string
+  consistency: number
+  colour: number
+  logo: number
+  bestFeautures: string[]
+  worstFeautures: string[]
+  timeSpent: string[]
+
+
+}
 
 
 
@@ -8,15 +24,27 @@ function Main() {
   //
   // ignore for now
   const [open, setOpen] = useState(false);
+  const [answers, setAnswers] = useState<AnswerType[]>([])
 
+  const initialForm: AnswerType = {
+    review: '',
+    email: '',
+    username: '',
+    consistency: 0,
+    colour: 0,
+    logo: 0,
+    bestFeautures: ['colour'],
+    worstFeautures: ['logo'],
+    timeSpent: ['swimming']
 
+  }
 
 
   return (
     <main className="main">
       <section className={`main__list ${open ? "open" : ""}`}>
         <h2>Answers list</h2>
-        {/* answers should go here */}
+        <AnswersList answersList={answers} />
       </section>
       <section className="main__form">
         <form
@@ -48,12 +76,11 @@ function Main() {
               consistency: Number(event.target.consistency.value),
               colour: Number(event.target.colour.value),
               logo: Number(event.target.logo.value),
-              bestFeatures: bestFeatures,
-              worstFeatures: worstFeatures,
+              bestFeautures: bestFeatures,
+              worstFeautures: worstFeatures,
               timeSpent: timeSpent,
             };
-            console.log('answer', answer)
-
+            setAnswers([...answers, answer])
 
           }}
         >
@@ -81,7 +108,7 @@ function Main() {
                     type="checkbox"
                     name="bestFeatures"
                     value="sound"
-                    required
+
                   />
                   <span> It squeaks!</span>
                 </label>
@@ -255,12 +282,12 @@ function Main() {
             <textarea></textarea>
           </label>
           <label>
-            {" "}
+
             Put your name here (if you feel like it):
-            <input type="text" name="username" value="username"></input>
+            <input type="text" name="username" ></input>
           </label>
           Leave us your email pretty please??
-          <input type="email" name="email" value="email"></input>
+          <input type="email" name="email"></input>
 
 
           <input
