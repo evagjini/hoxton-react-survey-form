@@ -1,17 +1,6 @@
-import { useState } from "react";
-import AnswersList from "./AnswersList";
+import { useState } from "react"
 
-const initialForm = {
-  review: "",
-  email: "",
-  username: "",
-  consistency: 0,
-  colour: 0,
-  logo: 0,
-  bestFeatures: [],
-  worstFeatures: [],
-  timeSpent: [],
-};
+
 
 function Main() {
   // State for the challenge #3
@@ -20,21 +9,8 @@ function Main() {
   // ignore for now
   const [open, setOpen] = useState(false);
 
-  const [form, setForm] = useState(initialForm);
 
-  const bestFeatures = [
-    ...document.querySelectorAll('input[name="bestFeatures"]:checked'),
-  ].map((input) => input.value);
 
-  console.log(bestFeatures);
-
-  const worstFeatures = [
-    ...document.querySelectorAll('input[name="worstFeatures"]:checked'),
-  ].map((input) => input.value);
-
-  console.log(worstFeatures);
-
-  // console.log(Number(event.target.consistency.value))
 
   return (
     <main className="main">
@@ -47,6 +23,38 @@ function Main() {
           className="form"
           onSubmit={(event) => {
             event.preventDefault();
+
+            const bestFeatures = [
+              ...document.querySelectorAll('input[name="bestFeatures"]:checked'),
+            ].map((input) => input.value);
+
+
+
+            const worstFeatures = [
+              ...document.querySelectorAll('input[name="worstFeatures"]:checked'),
+            ].map((input) => input.value);
+
+            const timeSpent = [
+              ...document.querySelectorAll('input[name="timeSpent"]:checked'),
+            ].map((input) => input.value);
+
+
+
+
+            const answer: AnswerType = {
+              review: event.target.review.value,
+              email: event.target.email.value,
+              username: event.target.username.value,
+              consistency: Number(event.target.consistency.value),
+              colour: Number(event.target.colour.value),
+              logo: Number(event.target.logo.value),
+              bestFeatures: bestFeatures,
+              worstFeatures: worstFeatures,
+              timeSpent: timeSpent,
+            };
+            console.log('answer', answer)
+
+
           }}
         >
           <h2> Tell us what you think about your rubber duck!</h2>
@@ -249,12 +257,11 @@ function Main() {
           <label>
             {" "}
             Put your name here (if you feel like it):
-            <input type="text" name="username" value=""></input>
+            <input type="text" name="username" value="username"></input>
           </label>
-          <label>
-            Leave us your email pretty please??
-            <input type="email" name="email" value=""></input>
-          </label>
+          Leave us your email pretty please??
+          <input type="email" name="email" value="email"></input>
+
 
           <input
             className="form__submit"
